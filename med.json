@@ -1,0 +1,97 @@
+{
+  "Parol20":{
+    "name":  "Parol",
+    "barkod1": "8699717010093",
+    "mg": 500,
+    "form": "tablet",
+    "prospektus": "https://www.titck.gov.tr/storage/Archive/2020/kubKtAttachments/T%C4%B0TCK%20Onayl%C4%B1%20KT%20PAROL%20500%20MG%20TB.pdf_7ba04d1d-47e3-4e69-9fbc-440eff063819.pdf",
+    "short_expo": "<p><strong>PAROL 500 MG Tablet</strong>, her tabletinde 500 mg parasetamol içeren bir ağrı kesici ve ateş düşürücüdür. 20 veya 30 tabletlik blister ambalajlarda bulunur.</p><p><strong>Uyarılar:</strong><br>Kullanım öncesinde son kullanma tarihi kontrol edilmeli ve içeriğindeki maddelere karşı alerji riski göz önünde bulundurulmalıdır.<br>Doktorun önerdiği doz aşılmamalıdır.</p><p><strong></strong> </p><p>Doktorunuzun önerdiği doz bilgisine ulaşmak için aşağıdaki <strong>\"Doktorum\"</strong> butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için ise aşağıdaki <strong>\"Alerjenler\"</strong> butonunu kullanınız ya da sesli olarak dile getiriniz.</p>",
+    "image": "D:/medicine-project/medicine-photos/parol500.jpg",
+    "update":"07.02.2025"
+  },
+  "Citoles10": {
+    "name": "Citoles",
+    "barkod1": "8699514096375",
+    "barkod2": "8699514090922",
+    "mg": 10,
+    "form": "tablet",
+    "prospektus":"https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kt_07bd9df9-3b5d-4011-bd2b-b47a0c4fd4b8.pdf",
+    "short_expo":"CİTOLES, her bir tabletinde 10 mg essitalopram içeren beyaz renkli, oval ve çentikli film tabletlerden oluşur. CİTOLES, depresyon (majör depresif durumlar), agorafobili (açık alan korkusu) veya agorafobisiz panik bozukluğu, sosyal anksiyete bozukluğu, yaygın anksiyete bozukluğu ve obsesif-kompulsif bozukluk (saplantı-zorlantı) gibi anksiyete bozukluklarının tedavisinde kullanılır. Essitalopram, selektif serotonin geri alım inhibitörleri (SSRIs) grubunda yer alır ve beyindeki serotonin düzeylerini artırarak bu hastalıkların tedavisine yardımcı olur.\n\nDoktorunuzun önerdiği doz bilgisine ulaşmak için aşağıdaki \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için ise aşağıdaki \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.",
+    "image": "D:/medicine-project/medicine-photos/citoles10.png",
+    "update": "07.02.2025"
+  },
+  "Aferin300": {
+    "name": "A-ferin",
+    "barkod1": "8699570150011",
+    "mg": 300,
+    "form": "tablet",
+    "prospektus": "https://pdf.ilacprospektusu.com/29271-a-ferin-300-mg-2-mg-10-mg-kapsul-kt.pdf",
+    "short_expo": "A-FERİN kapsül, grip ve soğuk algınlığına bağlı burun akıntısı, aksırma, burun ve boğazda kaşıntı, baş ağrısı, adale ağrısı, boğaz ağrısı, vücut kırıklığı, ateş, nezle, gözlerde sulanma ve kaşıntı gibi durumlara eşlik eden kuru öksürüğün tedavisinde kullanılır.\n\nDoktorunuzun önerdiği doz bilgisine ulaşmak için \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.",
+    "image": "D:/medicine-project/medicine-photos/aferin300.jpg",
+    "update": "07.02.2025"
+  },
+  "Contractubex": {
+    "name": "Contractubex",
+    "barkod1": "8699708340475",
+    "mg": 150000,
+    "form": "jel",
+    "prospektus": "https://titck.gov.tr/storage/kubKtAttachments/e388fe1248139.pdf",
+    "short_expo": "CONTRACTUBEX®, ciltte oluşan yara izlerinin (nedbe dokularının) tedavisinde kullanılan bir jeldir. Ameliyat, yanık, kaza veya travmaya bağlı yara izleri, akne izleri, Dupuytren kontraktürü ve travmatik tendon kontraktürü gibi durumlarda kullanılır.\n\nDoktorunuzun önerdiği doz bilgisine ulaşmak için \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.\n\n",
+    "image": "D:/medicine-project/medicine-photos/contractubex.jpg",
+    "update": "08.02.2025"
+  },
+  "Coraspin100": {
+    "name": "Coraspin",
+    "barkod1": "8699546130238",
+    "mg": 100,
+    "form": "tablet",
+    "prospektus": "https://titck.gov.tr/storage/kubKtAttachments/7a57864b43028.pdf",
+    "short_expo": "CORASPIN, 100 mg asetilsalisilik asit içeren, pıhtılaşma hücrelerinin kümeleşmesini önleyerek kalp ve damar hastalıklarında kullanılan bir ilaçtır. Göğüs ağrısı, kalp krizi, damar tıkanıklığı ve felç riskini azaltmada etkilidir.\n\nDoktorunuzun önerdiği doz bilgisine ulaşmak için \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.",
+    "image": "D:/medicine-project/medicine-photos/coraspin100.jpg",
+    "update": "08.02.2025"
+  },
+  "Santadine":{
+    "name": "Santadine",
+    "barkod1": "8699527170017",
+    "mg": 6,
+    "form": "kapsül",
+    "prospektus": "https://www.santafarma.com.tr/assets/Santadine-KT.pdf",
+    "short_expo": "SANTADİNE®, kas gevşetici olarak kullanılan ve omurilik üzerinde etkili bir ilaçtır. Sinirsel bozukluklar (multipl skleroz, beyin felci, omurilik hasarı vb.) nedeniyle artan kas kasılmalarını azaltmak için kullanılır.\n\nDoktorunuzun önerdiği doz bilgisine ulaşmak için \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.",
+    "image": "D:/medicine-project/medicine-photos/santadine6.jpg",
+    "update": "08.02.2025"
+  },
+  "Klamoks BID": {
+    "name": "Klamoks BID",
+    "barkod1": "8699569090694",
+    "mg": 1000,
+    "form": "tablet",
+    "prospektus": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/KLAMOKSBID1000mgfilmkapltabletKT_0238aa63-4c58-4c1a-9f8e-0e9a853f217a.pdf",
+    "short_expo": "KLAMOKS, tekrarlayan bademcik iltihabı, sinüzit, orta kulak iltihabı gibi üst solunum yolu enfeksiyonları; kronik bronşitin akut alevlenmeleri, akciğer iltihabı gibi alt solunum yolu enfeksiyonları; idrar yolu iltihabı, üretra (idrar kesesi) iltihabı, böbreklerin bakteriyel iltihabı gibi idrar yolu enfeksiyonları; çıban, apse (irin kesesi), selülit ve yara enfeksiyonları gibi deri ve yumuşak doku enfeksiyonları; diş apseleri gibi diş ve diş eti enfeksiyonları; kan ve dokularda bulunan bakteri veya toksinlere bağlı düşük, lohusalık humması, karın içi kan ve dokularda bakteri veya toksinlerin bulunması gibi çeşitli enfeksiyonların kısa süreli tedavisinde kullanılır. Doktorunuzun önerdiği doz bilgisine ulaşmak için \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.",
+    "image": "D:/medicine-project/medicine-photos/klamoksbıd1000mg.jpg",
+    "update": "08.02.2025"
+
+  },
+  "Parofon": {
+    "name":"Parofon",
+    "barkod1": "8699564012509",
+    "mg": 250,
+    "form": "tablet",
+    "prospektus": "https://www.santafarma.com.tr/assets/urunler/parafon-tablet/kt/parafon-tablet.pdf",
+    "short_expo":"PARAFON® nedir ve ne için kullanılır? PARAFON®, iskelet kası hastalıklarının çoğunda bulunan ağrı, gerginlik ve hareket sınırlamasını gidererek belirtilerin iyileşmesini sağlayan bir ajandır. Bel ağrısı, boyun tutulması, servikal sendrom (boyun, omuz ve kol ağrıları), iltihabi (inflamasyonlu) veya travmatik (darbelere bağlı) kas rahatsızlıkları, tendon (kasları kemiğe bağlayan kas kirişi) ve eklem rahatsızlıkları, ortopedik işlemler sırasında kullanılmaktadır. Doktorunuzun önerdiği doz bilgisine ulaşmak için \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.",
+    "image": "D:/medicine-project/medicine-photos/parafon.jpg",
+    "update": "08.02.2025"
+
+  },
+  "Brufen600": {
+    "name": "Brufen",
+    "barkod1": "8699548093159",
+    "mg": 600,
+    "form":"tablet",
+    "prospektus": "https://cdn.ilacrehberi.com/brufen-600-mg-film-kapli-tablet-a8e5-kt.pdf",
+    "short_expo": "BRUFEN®, eklemlerdeki romatizmal iltihabi hastalıkların (romatoid artrit, osteoartrit ve ankilozan spondilit) belirti ve bulgularının düzeltilmesi, gut (damla) hastalığında görülen eklem iltihabı, akut kas-iskelet ağrıların rahatlatılması, cerrahi operasyondan sonra görülen ağrı, adet dönemi ağrılarının giderilmesi gibi durumlarda kullanılmaktadır. Doktorunuzun önerdiği doz bilgisine ulaşmak için \"Doktorum\" butonuna basınız veya sesli olarak dile getiriniz. İlacın alerjenik verisine ulaşmak için \"Alerjenler\" butonunu kullanınız ya da sesli olarak dile getiriniz.",
+    "image": ""
+
+  }
+
+
+}
