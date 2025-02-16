@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parofon Tablet</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9FA;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 300;
+            color: #222;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.2); /* %20 büyüme */
+            box-shadow: 5px 8px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            padding: 14px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #FFC107;
+            transform: scale(1.05);
+        }
+
+        .prospektus {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="medicine-photos/parafon.jpg" alt="Parofon Tablet">
+        </div>
+
+        <h1>Parofon Tablet</h1>
+        <p>PARAFON®, iskelet kası hastalıklarının çoğunda bulunan ağrı, gerginlik ve hareket sınırlamasını gidererek belirtilerin iyileşmesini sağlayan bir ajandır. Bel ağrısı, boyun tutulması, servikal sendrom (boyun, omuz ve kol ağrıları), iltihabi (inflamasyonlu) veya travmatik (darbelere bağlı) kas rahatsızlıkları, tendon (kasları kemiğe bağlayan kas kirişi) ve eklem rahatsızlıkları, ortopedik işlemler sırasında kullanılmaktadır.</p>
+
+        <p><strong>Uyarılar:</strong><br>
+        Kullanım öncesinde son kullanma tarihi kontrol edilmeli ve içeriğindeki maddelere karşı alerji riski göz önünde bulundurulmalıdır.<br>
+        Doktorun önerdiği doz aşılmamalıdır.</p>
+
+        <p><strong>Doktorunuzun önerdiği doz bilgisine ulaşmak için</strong> aşağıdaki <strong>"Doktorum"</strong> butonuna basınız veya sesli olarak dile getiriniz.</p>
+
+        <p><strong>İlacın alerjenik verisine ulaşmak için</strong> aşağıdaki <strong>"Alerjenler"</strong> butonunu kullanınız ya da sesli olarak dile getiriniz.</p>
+
+        <div class="btn-container">
+            <button onclick="window.location.href='https://www.orneksite.com';">DOKTORUM</button>
+            <button onclick="window.location.href='https://www.orneksite.com';">ALERJENLER</button>
+        </div>
+
+        <div class="prospektus">
+            <p><strong>Detaylar için:</strong> <a href="https://www.santafarma.com.tr/assets/urunler/parafon-tablet/kt/parafon-tablet.pdf" target="_blank">Prospektüse Git</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
