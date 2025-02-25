@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORASPİN  Prospektüsü</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>CORASPİN KULLANIM TALİMATI </h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
+            <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
+            <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>CORASPİN'i aşağıdaki durumlarda KULLANMAYINIZ:</h2>
+                <p>Eğer;</p>
+                <ul>
+                    <li>Parasetamole veya ilacın içeriğindeki diğer maddelere karşı duyarlı (alerjik) iseniz,</li>
+                    <li>Şiddetli karaciğer ya da böbrek yetmezliğiniz varsa.</li>
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>CORASPİN'i aşağıdaki durumlarda DİKKATLİ KULLANINIZ:</h2>
+                <ul>
+                    <li>Kansızlığı (anemisi) olanlarda, akciğer hastalarında, karaciğer ve böbrek fonksiyon bozukluğu olan hastalarda doktor kontrolü altında dikkatli kullanılmalıdır.</li>
+                    <li>Deride kızarıklık, döküntü veya bir deri reaksiyonu görüldüğü taktirde dikkatli kullanılmalıdır.</li>
+                    <li>Parasetamol içeren başka ilaç alıyorsanız kullanmayınız. Parasetamol içeren başka ilaçlarla birlikte kullanımı doz aşımına neden olabilir.</li>
+                    <li>Alkol alıyorsanız günlük 2 gramdan fazla parasetamol (4 PAROL tablet) almamalısınız.</li>
+                    <li>Kilonuz normalin altındaysa, anoreksik iseniz ya da beslenme yetersizliğiniz mevcutsa.</li>
+                    <li>Sepsis gibi glutatyon eksikliği olan hastalarda, parasetamol kullanımı metabolik asidoz riskini arttırabilir.</li>
+                    <li>Ciddi bir enfeksiyonunuz varsa bu metabolik asidoz riskini arttırabilir.</li>
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>Diğer ilaçlar ile birlikte kullanım</h2>
+                <p>Bazı ilaçlar ile birlikte kullanıldığında CORASPİN'in   etkisi değişebilir.</p>
+                <ul>
+                    <li>Mide boşalmasında gecikme yaratan ilaçlar (Örn: propantelin vb.)</li>
+                    <li>Mide boşalmasını hızlandıran ilaçlar (Örn: metoklopramid gibi)</li>
+                    <li>Karaciğer enzimlerini uyaran ilaçlar (örn. bazı uyku ilaçları, sara hastalığında kullanılan bazı ilaçlar)</li>
+                    <li>Antibiyotik olarak kullanılan kloramfenikol, rifampisin</li>
+                    <li>Varfarin ve kumarin türevi antikoagülanlar (kan pıhtılaşmasını engelleyen ilaçlar)</li>
+                    <li>Zidovudin (HIV tedavisinde kullanılan bir ilaç)</li>
+                    <li>Domperidon (bulantı kusma tedavisinde kullanılır)</li>
+                    <li>Sarı kantaron içerikli ilaçlar</li>
+                    <li>Kolestiramin içerikli ilaçlar (yüksek kolesterol tedavisinde kullanılır)</li>
+                    <li>Diğer ağrı kesicilerle birlikte kullanım</li>
+                    <li>Alkol</li>
+                    <li>Antidepresan (ruhsal çöküntü tedavisinde kullanılan bazı ilaçlar)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
