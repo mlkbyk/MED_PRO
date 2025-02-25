@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFERİN  Prospektüsü</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>AFERİN KULLANIM TALİMATI </h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
+            <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
+            <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>AFERİN'i aşağıdaki durumlarda KULLANMAYINIZ:</h2>
+                <p>Eğer;</p>
+                <ul>
+                     <li>İçeriğindeki etkin veya yardımcı maddelere karşı aşırı duyarlılığınız varsa,</li>
+            <li>Kodein gibi ilaçları karaciğerde hızlı işleyen enzim sistemine sahip iseniz,</li>
+            <li>12 yaşından küçük iseniz,</li>
+            <li>Şiddetli karaciğer ya da böbrek yetmezliğiniz varsa,</li>
+            <li>Son 2 hafta içinde monoamino oksidaz (MAO) inhibitörü (depresyon tedavisinde kullanılan bir grup ilaç) kullandıysanız,</li>
+            <li>Solunumunuzu baskılayan bir durumunuz varsa,</li>
+            <li>Kafa içi basıncınızı artıracak durumlarda veya kafa travması geçirdiyseniz,</li>
+            <li>Astım (nefes darlığı) atağı geçirdiyseniz,</li>
+            <li>Alkol bağımlılığınız varsa,</li>
+            <li>Bağırsak düğümlenmesi ya da şüphesi varsa (paralitik ileus),</li>
+            <li>0-18 yaş grubunda ve uyku apnesi (uykuda solunum durması) nedeniyle bademcik ameliyatı sonrası ağrıyı gidermek için kullanıyorsanız,</li>
+            <li>Emziriyorsanız.</li>
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>AFERİN'i aşağıdaki durumlarda DİKKATLİ KULLANINIZ:</h2>
+                <ul>
+                   <li>Kansızlığı (anemisi) olanlarda, akciğer hastalarında, karaciğer ve böbrek fonksiyon bozukluğu olan hastalarda doktor kontrolü altında dikkatli kullanılmalıdır.</li>
+        <li>Parasetamol içeren başka bir ilaç kullanıyorsanız.</li>
+        <li>Alkol alıyorsanız günlük 2 gramdan fazla parasetamol almamalısınız.</li>
+        <li>Karaciğer enzimlerinde yükselme ve gelip geçici sarılıkla karakterize kalıtsal bir hastalık olan Gilbert sendromunuz varsa.</li>
+        <li>Kan şekeri metabolizmasında etkili olan glukoz 6 fosfat dehidrogenaz enzimi eksikliği olan hastalarda seyrek olarak hemoliz (kırmızı kan hücrelerinin yıkımı) görülebilir.</li>
+        <li>Epilepsi (sara) hastasıysanız.</li>
+        <li>Göz içi basıncınız artmışsa (örneğin glokom).</li>
+        <li>Yüksek tansiyon hastasıysanız.</li>
+        <li>Kalp damar hastalığınız varsa.</li>
+        <li>Bronşların harabiyeti sonucu kalıcı genişlemesi (bronşektazi), bronş iltihabı (bronşit), astım hastalığınız varsa.</li>
+        <li>Prostat büyümesi (prostat hipertrofisi) varsa.</li>
+        <li>İdrara çıkamıyor veya idrar kesenizi tamamen boşaltamıyorsanız (üriner retansiyon).</li>
+        <li>Öksürük veya soğuk algınlığında kullanılan antihistaminik özellikli ilaçlar kullanıyorsanız.</li>
+        <li>Böbrek üstü bezi yetmezliği (Addison hastalığı) olanlarda veya tümörü (Feokromositoma) varsa.</li>
+        <li>İltihaplı bağırsak hastalığı veya şiddetli ishali olanlarda.</li>
+        <li>Safra kesesi hastalığınız veya safra taşınız varsa.</li>
+        <li>Mide–bağırsak veya idrar yollarında operasyon geçirdiyseniz.</li>
+        <li>Yaşlı veya güçsüz hastalarda.</li>
+        <li>Düşük tansiyon, şok (dolaşım yetersizliği) olanlarda.</li>
+        <li>Alkol veya ilaç bağımlısı olanlarda.</li>
+        <li>CYP2D6 adlı enzim eksikliği ya da tamamen olmayanlarda (kodeinin ağrı kesici etkisi yeterli düzeyde elde edilemeyecektir).</li>
+        <li>Hipotiroidiniz (tiroid bezinin az çalışması) varsa.</li>
+        <li>Miyastenia gravis (kas güçsüzlüğü ile karakterize bir hastalık) hastasıysanız.</li>
+        <li>Şiddetli kalp, solunum, akciğer iltihaplanması ve nöromüsküler bozuklukları (sinir ve kas sistemleri ile ilgili hastalıklar grubu) olanlarda.</li>
+        <li>Çoklu yaralanmalarda veya uzamış ameliyatlarda solunumu risk altında olan çocuklarda.</li>
+        <li>12 yaş ve üzerindeyseniz, solunum durması, solunum baskılanması ve çocuk ölümlerine neden olabileceği için doktorunuz tarafından yarar-risk değerlendirilmesi yapılmadan kullanmayınız.</li>
+        <li>AFERİN birden (akut) yüksek doz verildiğinde ciddi karaciğer toksisitesine neden olur. Erişkinlerde uzun süreli (kronik) günlük dozlarda karaciğer hasarına neden olabilir.</li>
+        <li>Alkolik karaciğer hastalarında dikkatli kullanılmalıdır.</li>
+        <li>Alkol alan kişilerde karaciğer zehirlenmesi (hepatotoksisite) riski nedeniyle günlük alınan parasetamol dozunun 2000 mg’ı aşmaması gerekir.</li>
+        <li>Sepsis gibi glutatyon eksikliği olan hastalarda, parasetamol kullanımı metabolik asidoz riskini artırabilir.</li>
+        <li>Ciddi bir enfeksiyonunuz varsa bu metabolik asidoz riskini artırabilir.</li>
+        <li>Metabolik asidoz belirtileri şunlardır:
+            <ul>
+                <li>Derin, hızlı ve zorlanarak nefes alıp vermek.</li>
+                <li>Mide bulantısı ve kusma.</li>
+                <li>İştahsızlık.</li>
+            </ul>
+        </li>
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>Diğer ilaçlar ile birlikte kullanım</h2>
+                <p>Bazı ilaçlar ile birlikte kullanıldığında AFERİN’in etkisi değişebilir.</p>
+              <p>Eğer reçeteli ya da reçetesiz herhangi bir ilacı şu anda kullanıyorsanız veya son zamanlarda kullandınız ise lütfen doktorunuza veya eczacınıza bunlar hakkında bilgi veriniz.</p>
+    <p>Aşağıdaki ilaçları kullanıyorsanız lütfen doktorunuza söyleyiniz:</p>
+                <ul>
+                   <li>Mide boşalmasında gecikme yaratan ilaçlar (Örn: propantelin vb.)</li>
+        <li>Mide boşalmasını hızlandıran ilaçlar (Örn: metoklopramid gibi)</li>
+        <li>Mide ülseri (yarası) tedavisinde kullanılan ilaçlar (Örn: simetidin)</li>
+        <li>Karaciğer enzimlerini uyaran ilaçlar (Örn: bazı uyku ilaçları, sara hastalığında kullanılan bazı ilaçlar gibi)</li>
+        <li>Antibiyotik olarak kullanılan kloramfenikol, siprofloksasin, rifampisin</li>
+        <li>Kan pıhtılaşmasını engelleyen ilaçlar (Örn: varfarin, kumarin)</li>
+        <li>Çocuk ve erişkinlerde görülen HIV enfeksiyonlarının (AIDS) tedavi ve önlenmesinde kullanılan ilaçlar (Örn: zidovudin)</li>
+        <li>Viral enfeksiyonların tedavisinde kullanılan ilaçlar (Örn: ritonavir)</li>
+        <li>Bulantı-kusma tedavisinde kullanılır (Örn: domperidon)</li>
+        <li>Ruhsal çöküntü tedavisinde kullanılan bazı ilaçlar (Örn: antidepresanlar)</li>
+        <li>Fenitoin (sara tedavisinde kullanılan ilaçlar)</li>
+        <li>Monoaminooksidaz (MAO) inhibitörü adı verilen (depresyon tedavisinde kullanılan bir grup ilaç) ilaçlar</li>
+        <li>Antipsikotik adı verilen ilaçlar (şizofreni gibi psikotik hastalıklarda kullanılan bir ilaç grubu)</li>
+        <li>İshal tedavisinde kullanılan ilaçlar (Örn: lopramid)</li>
+        <li>Kan tansiyonunu düşüren ilaçlar</li>
+        <li>Alerji için kullanılan ilaçlar</li>
+        <li>Sinir sistemi üzerinde etkileri olan ilaçlar (Örn: diazem)</li>
+        <li>Kalp rahatsızlıklarında kullanılan ilaçlar (Örn: meksiletin)</li>
+        <li>Mide ve bağırsak hareketini hızlandıran ve mide bulantısı önleyici ilaçlar (Örn: metoklopramid)</li>
+        <li>Diğer narkotik ağrı kesiciler, alkol, genel anestezi yapan ilaçlar</li>
+        <li>Antikolinerjik ilaçlar (asetilkolin maddesinin sinir sistemi üzerindeki etkilerinin ortadan kalkması sonucu ortaya çıkan durumlar) (Örn: atropin)</li>
+        <li>Aşırı dozda ilaç almanın etkilerini tedavi etmek ve ilaç alışkanlığını belirlemek için kullanılan ilaçlar (Örn: nalokson)</li>
+        <li>Kolestiramin (kanda yağ düzeyini düşürmek için kullanılır)</li>
+        <li>St. John’s Wort (sarı kantaron), (antidepresan olarak kullanılır)</li>
+        <li>Topisetron ve granisetron (kemoterapiye bağlı bulantı ve kusmanın tedavisinde kullanılan ilaçlar)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
