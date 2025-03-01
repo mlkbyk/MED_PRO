@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANTADİNE Prospektüsü</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>SANTADİNE KULLANIM TALİMATI</h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
+            <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
+            <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>SANTADİNE’u aşağıdaki durumlarda KULLANMAYINIZ:</h2>
+                <p>Eğer;</p>
+                <ul>
+                    <li>Etkin maddelere ya da yardımcı maddelerden herhangi birisine karşı alerjiniz varsa (eğer alerjiniz olabileceğini düşünüyorsanız, doktorunuzdan tavsiyede bulunmasını isteyiniz).</li>
+                    <li>Karaciğerinizle ilgili ciddi sorunlarınız varsa.</li>
+                    <li>Fluvoksamin (depresyon tedavisinde kullanılır) içeren ilaçlar alıyorsanız.</li>
+                    <li>Siprofloksasin (enfeksiyon tedavisinde kullanılan bir antibiyotik) içeren ilaçlar alıyorsanız.</li>
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>SANTADİNE’u aşağıdaki durumlarda DİKKATLİ KULLANINIZ:</h2>
+                <ul>
+                    <li>Karaciğer yetmezliği ile ilgili herhangi bir belirti taşıyorsanız (nedeni bilinmeyen bulantı, iştah kaybı ya da yorgunluk gibi) doktorunuz karaciğer fonksiyonlarınızı izlemek için size kan test yaparak SANTADİNE® tedavisine devam edip etmeme kararı alabilir.</li>
+                    <li>Böbrekle ilgili sorunlarınız varsa doktorunuz dozunuzu azaltmaya karar verebilir.</li>
+                    <li>SANTADİNE®, bilinç kaybı ve kan dolaşımı yetmezliği gibi ciddi tansiyon düşüklüğü (kan basıncı düşüşü) belirtilerinin ortaya çıkmasına sebep olabilir.</li>
+                    <li>Koroner kalp hastalığı ve/veya kalp yetmezliğiniz varsa "aynı işlem".</li>
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>Diğer ilaçlar ile birlikte kullanım</h2>
+                <p>Bazı ilaçlar ile birlikte kullanıldığında SANTADİNE’un etkisi değişebilir.</p>
+                <ul>
+                    <li>İdrar söktürücü (diüretik) ilaçlar da dahil olmak üzere yüksek kan basıncının tedavisinde kullanılan ilaçlar.</li>
+                    <li>Uyumanıza yardımcı olan ilaçlar ya da güçlü ağrı kesiciler (çünkü SANTADİNE® bu ilaçların sakinleştirici etkisini artırabilir) kullanıyorsanız.</li>
+                   <li>Antiaritmikler (düzensiz kalp atışlarının tedavisinde kullanılır) ve kalp fonksiyonu üzerinde ‘QT aralığı uzaması’ olarak adlandırılan bir istenmeyen etki meydana getirebilecek diğer ilaçlar.</li>
+                   <li>Simetidin (onikiparmak barsağı ya da mide ülserlerinin tedavisinde kullanılır).</li>
+                   <li>Florokinolonlar (enfeksiyon tedavisinde kullanılan antibiyotikler) ve rifampisin (enfeksiyon tedavisinde kullanılan bir antibiyotik).</li>
+                   <li>Rofekoksib (ağrı ve iltihap giderici olarak kullanılır).</li>
+                   <li>Doğum kontrol hapları.</li>
+                   <li>Tiklopidin (inme riskini azaltmak için kullanılır).</li>
+                   <li>Yoğun şekilde sigara kullanıyorsanız (günde 10 sigaradan daha fazla).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
