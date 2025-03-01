@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - MEDPRO</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            height: 100vh; display: flex; justify-content: center; align-items: center;
+            background: url('medicine-photos/med-pro-0bg.jpg') no-repeat center center/cover;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            max-width: 360px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h2 {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+        input {
+            width: 100%; padding: 12px; margin: 10px 0;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            outline: none;
+        }
+        input::placeholder { color: rgba(255, 255, 255, 0.7); }
+        .btn {
+            width: 100%; padding: 12px;
+            background: #FFD700;
+            color: #333;
+            font-size: 18px; font-weight: bold;
+            border: none; border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #FFC107;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Giriş Yap</h2>
+        <input type="text" id="tc" placeholder="TC Kimlik Numarası" maxlength="11">
+        <input type="password" id="password" placeholder="Şifre">
+        <button class="btn" onclick="redirectToTerms()">Giriş Yap</button>
+    </div>
+
+    <script>
+        function redirectToTerms() {
+            window.location.href = "terms_and_conditions.html"; // Kullanım şartları sayfasına yönlendir
+        }
+    </script>
+</body>
+</html>
