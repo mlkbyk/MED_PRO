@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARAFON Prospektüsü</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>PARAFON KULLANIM TALİMATI</h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
+            <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
+            <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>PARAFON’u aşağıdaki durumlarda KULLANMAYINIZ:</h2>
+                <p>Eğer;</p>
+                <ul>
+                    <li>Eğer PARAFON®’un herhangi bir bileşenine karşı aşırı duyarlıysanız (alerjiniz varsa).</li>
+                    <li>Eğer Çölyak hastalığınız (buğday ürünlerine karşı duyarlılıkla oluşan iltihabi bir barsak hastalığı) varsa.</li>
+                    <li>Karaciğer yetmezliğiniz varsa.</li>
+                    <li>Böbrek yetmezliğiniz varsa.</li>
+                    <li>Akut porfiride (karın ağrısı ve kas kramplarına neden olan bir çeşit kalıtsal hastalık) kullanmayınız.</li>
+                    
+
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>PARAFON’u aşağıdaki durumlarda DİKKATLİ KULLANINIZ:</h2>
+                <ul>
+                    <li>Kansızlık (yorgunluk, güçsüzlük, yüzde solgunluk, nefes darlığı ve çarpıntı gibi belirtilerle kendini gösterir), akciğer hastalığı (öksürük, balgam, hırıltılı solunum, nefes darlığı), böbrek fonksiyon bozukluğunuz (çok idrara çıkma, gece idrara çıkma, halsizlik, iştahsızlık, bulantı, kusma, uykusuzluk, idrarda kan görülmesi gibi belirtilerle kendini gösterir) varsa bu ilacı doktorunuzun kontrolü altında dikkatle kullanınız.</li>
+                    <li>Karaciğer fonksiyon bozukluğu: Yetişkinlerde kronik günlük dozlarda karaciğer hasarına neden olabilir. Akut yüksek dozda ciddi karaciğer toksisitesine neden olabilir. Eğer ateş, döküntü, iştahsızlık, bulantı, kusma, yorgunluk, sağ üst kadranda ağrı, koyu renkli idrar veya sarılık gibi şikayetleriniz ortaya çıkarsa mutlaka doktorunuzu bu konuda bilgilendiriniz. Bu belirtiler, ilacın karaciğeriniz üzerindeki zararlı etkilerinin belirtisi olabilir. Bu durumda doktorunuz PARAFON® ile tedavinizi sonlandırabilir.</li>
+                    <li>Eğer bilinen bir alerjiniz varsa veya daha önceden ilaçlara karşı alerjiniz olduysa ilacınızı dikkatli kullanınız. Eğer kızarma, kurdeşen veya cilt kaşınması gibi hassasiyet reaksiyonları görülürse doktorunuzu bilgilendiriniz.</li>
+                    <li>PARAFON® kullanımı sersemlik hissi yapabilir. Bu nedenle ilacınızı alkol veya merkezi sinir sistemini baskılayan ilaçlarla birlikte kullandığınız takdirde sersemlik etkisinin artabileceğini göz önünde bulundurunuz.</li>
+                    <li>Alkolik karaciğer hastalarında dikkatli kullanılmalıdır. Düzenli olarak çok miktarda alkol tüketiyorsanız ilacınızın önerilen dozlarını aşmamalısınız. Alkol ile birlikte PARAFON® kullanımı ilacın karaciğer üzerindeki zararlı etkilerini artırır.</li>
+                    <li>Parasetamol içeren diğer ilaçların PARAFON® ile eşzamanlı kullanımından kaçınılmalıdır.</li>
+                    <li>Deride kızarıklık, döküntü veya bir deri reaksiyonu görüldüğü takdirde dikkatli kullanılmalıdır.</li>
+                    <li>Parasetamolü ilk kullananlarda veya daha önce kullanım hikayesi olanlarda, kullanımın ilk dozunda veya tekrarlayan dozlarında deride kızarıklık, döküntü veya bir deri reaksiyonu oluşabilmektedir. Bu durumda doktor ile irtibata geçilerek ilacın kullanımının bırakılması ve alternatif bir tedaviye geçilmesi gerekmektedir. Parasetamol ile deri reaksiyonu gözlenen kişi bir daha bu ilacı veya parasetamol içeren başka bir ilacı kullanmamalıdır. Bu durum, ciddi ve ölümle sonuçlanabilen ciltte ve göz çevresinde kan oturması, şişlik ve kızarıklıkla seyreden iltihap (Stevens-Johnson sendromu), deride içi sıvı dolu kabarcıklarla seyreden ciddi bir hastalık (toksik epidermal nekroliz) ve yüksek ateşin eşlik ettiği akut yaygın döküntü içi cerahat dolu küçük kabarcıklar (akut generalize ekzantematöz püstüloz) dahil cilt reaksiyonlarına neden olabilmektedir.</li>
+                    <li>Karaciğer enzimlerinde yükselme ve gelip geçici sarılıkla karakterize kalıtsal bir hastalık olan Gilbert sendromunuz varsa PARAFON®’u dikkatli kullanınız.</li>
+                    <li>Kan şekeri metabolizmasında etkili olan glukoz 6 fosfat dehidrogenaz enzimi eksikliği olan hastalarda seyrek olarak hemoliz (kırmızı kan hücrelerinin yıkımı) görülebilir.</li>
+                    <li>3 – 5 gün içinde yeni belirtilerin oluşması ya da ağrının ve/veya ateşin azalmaması halinde, PARAFON® kullanmaya son vererek doktorunuza danışınız.</li>
+ 
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>Diğer ilaçlar ile birlikte kullanım</h2>
+                <p>Bazı ilaçlar ile birlikte kullanıldığında PARAFON’un etkisi değişebilir.</p>
+                <ul>
+                    <li>Alkol veya merkezi sinir sistemini baskılayan ilaçlar (PARAFON® bu ilaçlarla birlikte kullanıldığında sersemlik halini ve benzeri istenmeyen etkileri artırabilir).</li>
+                    <li>Mide boşalmasında gecikme yaratan ilaçlar (Örn: propantelin vb.).</li>
+                    <li>Mide boşalmasını hızlandıran ilaçlar (Örn: metoklopramid gibi).</li>
+                    <li>Karaciğer enzimlerini uyaran ilaçlar (Örn: bazı uyku ilaçları, sara hastalığında kullanılan bazı ilaçlar (fenitoin, fenobarbital, karbamazepin) gibi).</li>
+                    <li>Antibiyotik olarak kullanılan kloramfenikol, rifampisin.</li>
+                    <li>Varfarin ve kumarin türevi antikoagülanlar (kan pıhtılaşmasını engelleyen ilaçlar).</li>
+                    <li>Zidovudin (Çocuk ve erişkinlerde görülen HIV enfeksiyonlarının (AIDS) tedavi ve önlenmesinde kullanılan bir ilaç).</li>
+                    <li>Domperidon (bulantı-kusma tedavisinde kullanılır).</li>
+                    <li>Sarı kantaron (St John’s Wort / Hypericum perforatum) içerikli ilaçlar.</li>
+                    <li>Kolestirmain içerikli ilaçlar (yüksek kolesterol tedavisinde kullanılır).</li>
+                    <li>Tropisetron ve granisetron içerikli ilaçlar (radyoterapi ve/veya kemoterapi alan hastalarda bulantı ve kusmanın önlenmesi amacıyla kullanılır).</li>
+                    <li>Diğer ağrı kesicilerle birlikte kullanım.</li>
+                    <li>Alkol.</li>
+                    <li>Antidepresan (ruhsal çöküntü tedavisinde kullanılan bazı ilaçlar).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
