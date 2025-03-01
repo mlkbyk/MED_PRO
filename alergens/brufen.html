@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUFEN Prospektüsü</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>BRUFEN KULLANIM TALİMATI</h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
+            <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
+            <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>BRUFEN’u aşağıdaki durumlarda KULLANMAYINIZ:</h2>
+                <p>Eğer;</p>
+                <ul>
+                   <li>Hamileliğinizin son 3 ayında iseniz.<li>
+                   <li>İbuprofene veya bu ilacın içindeki yardımcı maddelerden birine karşı aşırı duyarlı
+                     (alerjik) iseniz.<li>
+                   <li>Kanama eğiliminizi arttıran bir rahatsızlığınız varsa.<li>
+                   <li>Şiddetli karaciğer ve böbrek yetmezliğiniz var ise.<li>
+                    <li>Şiddetli kalp yetmezliğiniz var ise<li>
+                    <li>Daha önceden BRUFEN ya da benzer bir ürün ile tedavi edildiğinizde; mide ülseri (yarası), duedonal ülser (oniki parmak bağırsağı yarası) veya kanamanız olduysa.</li>
+                   <li>NSAİİ aldığınızda midede kanama veya yırtık olduysa.</li>
+                  <li>Daha önceden asetilsalisilik asit ya da diğer NSAİİ’ lere karşı alerjik reaksiyonlar (nefes almada zorluk, burun tıkanıklığı, kurdeşen gibi) gösterdiyseniz.</li>
+                   <li>Koroner arter bypass cerrahisi (kalp damarlarındaki tıkanıklığın düzeltilmesi ameliyatı) öncesi veya sonrası dönemdeyseniz.</li>
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>BRUFEN’u aşağıdaki durumlarda DİKKATLİ KULLANINIZ:</h2>
+                <ul>
+                    <li>Kesin bir bağışıklık sistemi hastalığınız varsa (karışık bağ doku hastalıkları ve sistemik lupus eritemetozus (SLE), eklem ağrısı ile sonuçlanan bağ dokusunu etkileyen bağışıklık sistemi durumları, cilt değişimi ve diğer organların bozuklukları); aseptik menenjit riskinde artış olabilir. Aseptik menenjit, beyni saran zarların iltihaplanmasıyla oluşan ciddi bir durumdur. En önemli belirtileri yüksek ateş, şiddetli başağrısı, halsizlik, iştahsızlık, ensede ağrı veya ense sertliği, bilinç bulanıklığı, uyku hali, kusma, parlak ışığa bakamamadır.</li>
+                    <li>Böbrek ve karaciğer fonksiyonunuzda bozukluk varsa.</li>
+                    <li>Kalp yetmezliği, anjina (göğüs ağrısı), kalp krizi, by-pass ameliyatı, periferik arter hastalığı (daralmış veya tıkanmış atardamarlar yüzünden bacaklarda veya ayaklarda yetersiz dolaşım olması) gibi kalp problemleriniz varsa veya herhangi bir çeşit inme geçirdiyseniz (“mini felç” veya geçici iskemik atak “GIA” dahil).</li>
+                    <li>Ailenizde kalp rahatsızlıkları veya inme, yüksek tansiyon, şeker hastalığı, yüksek kolesterol gibi hastalık geçmişi var veya sigara içiyorsanız.</li>
+                    <li>BRUFEN nefes almada güçlük, kurdeşen ya da ciddi alerjik reaksiyonlara sebebiyet verebileceğinden, astımınız, kronik rinit (kronik tıkanıklık ve akıntılı burun) ya da alerjik hastalıklarınız varsa.</li>
+                    <li>İltihaplı bağırsak hastalığınız varsa, önceki mide ülseriniz veya kanama eğiliminiz artar.</li>
+                    <li>BRUFEN ve benzeri ilaçlar, özellikle yüksek dozlarda ve uzun süreyle kullanıldıklarında, kalp krizi (miyokard enfarktüsü) ve inme (felç) riskinde küçük bir artış ile ilişkili bulunmuştur.</li>
+                    <li>Eğer kalp yetmezliği gibi kalp problemleri, anjina (göğüs ağrısı) veya kalp krizi geçirdiyseniz, by-pass ameliyatı veya periferik arter hastalığınız (daralmış veya tıkanmış atardamarlar yüzünden bacaklarda veya ayaklarda yetersiz dolaşım olması) varsa, eğer önceden inme geçirdiyseniz veya bu gibi durumlar için risk taşıdığınızı düşünüyorsanız.</li>
+                    <li>Kortikosteroid adı verilen ve enflamasyon tedavisinde kullanılan ilaçların yerine geçmez. Kortikosteroid tedavisi sonlandırılırken azaltılarak kesilmelidir. BRUFEN enfeksiyona bağlı olmayan enflamasyon durumlarında tanı konulmasını zorlaştırabilir.</li>
+                    <li>Şiddetli böbrek yetmezliği olan hastalarda BRUFEN kullanımına ilişkin bilgi bulunmamaktadır. Bu hastalarda kullanımı önerilmez. Zorunlu kullanım durumunda hastanın böbrek fonksiyonlarının yakından takip edilmesi önerilir.</li>
+                    <li>Kullanım sırasında karaciğer bozukluğuna ilişkin belirtiler ortaya çıktığında BRUFEN’in kesilmesi gerekir.</li>
+                    <li>BRUFEN kullanımı sırasında anemi (kansızlık) gelişirse kan kontrolleri yapılmalıdır.</li>
+                    <li>BRUFEN kullanımı sırasında hastalar kanama bozukluğu açısından izlenmelidir.</li>
+                    <li>Kanama eğiliminizi arttıran bir rahatsızlığınız varsa.</li>
+                    <li>Su çiçeği ya da zona hastalığınız varsa.</li>
+                    <li>Yumurtlamayı engelleyerek üremeyi olumsuz etkileyebilir.</li>
+                    <li>Herhangi bir ağrı kesicinin uzun süreli kullanımına bağlı olarak, daha fazla ağrı kesiciyle tedavi edilmemesi gereken baş ağrısı oluşabilir.</li>
+                    
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>Diğer ilaçlar ile birlikte kullanım</h2>
+                <p>Bazı ilaçlar ile birlikte kullanıldığında BRUFEN’un etkisi değişebilir.</p>
+                <ul>
+ <li>Aminoglikozit sınıfı antibiyotikler (örn. gentamisin, kanamisin, streptomisin); bunların atılımları azalabilir ve istenmeyen etkileri artabilir. Çocuklarda ibuprofen ve aminoglikozitlerin birlikte kullanımında dikkatli olunmalıdır.</li>
+<li>Yüksek tansiyon ilaçları; tansiyon düşürücü etki azalabilir.</li>
+<li>Kan pıhtılaşmasını engelleyen ilaçlar (örn. varfarin); pıhtılaşma engelleyici etki artabilir.</li>
+<li>Kan pıhtılaşmasına aracılık eden hücrelerin faaliyetini engelleyen ilaçlar (antitrombosit ajanlar, örn. aspirin, dipiridamol, klopidogrel) ve depresyon için kullanılan selektif serotonin geri-alım inhibitörleri (örn. fluoksetin, fluvoksamin, paroksetin, sertralin); NSAİİ’ler ile birlikte kullanıldıklarında mide-bağırsak kanalında kanama riskini arttırabilirler. Tiklopidin ile ibuprofenin birlikte kullanımından kaçınılmalıdır.</li>
+<li>Aspirin; istenmeyen etki olasılığı artabilir.</li>
+<li>Atenolol gibi beta-blokör (kalpteki beta-adrenoseptör adı verilen hücreleri engelleyerek tansiyon düşüren ilaçlar) ilaçların tansiyon düşürücü etkilerini azaltır.</li>
+<li>İdrar söktürücüler (örn. furosemid); idrar söktürücü etki azalabilir ve böbrek bozukluğu riski artabilir.</li>
+<li>NSAİİ’ler, tiyazidlerin antihipertansif etkilerini azaltırlar.</li>
+<li>Kalp yetmezliğinde kullanılan kalp glikozidleri (örn. digoksin, digitoksin); bu ilaçların kan düzeyleri artabilir.</li>
+<li>İbuprofen, kaptoprilin (tansiyonu düşürmek için kullanılır) sodyum atılımı üzerindeki etkisini azaltabilir.</li>
+<li>Kinolon sınıfı antibiyotikler (örn. siprofloksasin); nöbet (konvülsiyon) gelişme riski vardır.</li>
+<li>Kolestiramin: İbuprofenin kan yağlarını düşürmek için kullanılan kolestiramin ile birlikte uygulanması, ibuprofenin mide-bağırsak kanalında emilimini azaltabilir. Bu ilaçlar birlikte kullanıldığında en az 2 saat ara ile alınmalıdır.</li>
+<li>Sülfonilüre: NSAİİ’ler kan şekerini düşürmek için kullanılan sülfonilüre etkisini arttırabilir. Sülfonilüre tedavisi görmekte olan hastalarda ibuprofen kullanımı ile çok seyrek hipoglisemi (kan şekerinin düşmesi) rapor edilmiştir.</li>
+<li>Diğer ağrı kesiciler (Cox-2 inhibitörleri dahil diğer NSAİİ’ler; örn. aspirin, naproksen, selekoksib, nimesülid); iki veya daha fazla NSAİ ilacın birlikte kullanılmasından kaçınılmalıdır.</li>
+<li>Ağrı ve iltihaplanma ile seyreden çeşitli hastalıklarda kullanılan kortizon grubu ilaçlar; mide-bağırsak kanalında ülser ve kanama riski artabilir.</li>
+<li>Ruhsal hastalıklarda kullanılan lityum tuzlarının ve romatizmal eklem hastalıklarında, bazı kanser türlerinde kullanılan metotreksat’ın vücuttan atılımları azalabilir.</li>
+<li>Mifepriston (düşük ilacı): NSAİİ’ler antiprostaglandin özellikleri nedeniyle teorik olarak ilacın etkililiğinde azalmaya yol açabilir ancak yapılmış olan sayılı çalışmadan elde edilen verilere göre bu tip ilaçların NSAİİ’ler ile aynı gün birlikte kullanılmasının, mifepriston veya prostaglandinin üzerinde klinik olarak olumsuz etkisi olmadığını göstermektedir.</li>
+<li>Siklosporin (organ nakli sonrası kullanılan bir ilaç); böbrek bozukluğu riskinde artış olabilir.</li>
+<li>Takrolimus (organ nakli sonrası kullanılan bir ilaç); NSAİİ’ler ile beraber kullanıldığında böbrek üzerine olan zararlı etkilerinde artış olabilir.</li>
+<li>Tiklopidin (kan pıhtılaşmasını önleyen bir ilaç) ile birlikte kullanılmamalıdır.</li>
+<li>Zidovudin (AIDS tedavisinde kullanılan bir ilaç); NSAİİ’ler ile beraber verildiğinde kandaki toksik etki riskinde artış olabilir. Aynı zamanda zidovudin ve ibuprofen tedavisi alan HIV (+) hemofili (kanama sorunu) hastalarında kan oturması ve eklem boşluğunda kan birikmesi riskinde artışa ilişkin kanıt bulunmaktadır.</li>
+<li>CYP2C9 İnhibitörleri: Mantar enfeksiyonu tedavisinde kullanılan vorikonazol veya flukonazol içeren ilaçlarla birlikte yüksek doz ibuprofen kullanılması durumunda, ibuprofen dozunun düşürülmesi gerekebilir.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
