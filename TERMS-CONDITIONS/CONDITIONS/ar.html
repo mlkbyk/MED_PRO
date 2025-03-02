@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشروط والأحكام - MEDPRO</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: #333;
+            background: #F7F7F7;
+            padding: 20px;
+            direction: rtl;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(45deg, #FF9F00, #F88F00);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(255, 159, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 159, 0, 0.6);
+            background: linear-gradient(45deg, #F88F00, #FF9F00);
+        }
+        select {
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 16px;
+            background: linear-gradient(45deg, #FF9F00, #F88F00); /* Yellow gradient */
+            color: #fff;
+            border: none;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        select:hover {
+            background: linear-gradient(45deg, #F88F00, #FF9F00); /* Hover color change */
+            box-shadow: 0 4px 10px rgba(255, 159, 0, 0.4);
+            transform: scale(1.02);
+        }
+
+        select option {
+            background-color: #FF9F00; /* Yellow background */
+            color: #fff; /* White text */
+            transition: background-color 0.3s ease;
+        }
+
+        select option:hover {
+            background-color: #F88F00; /* Darker yellow on hover */
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="tr">Türkçe</option>
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="ar" selected>العربية</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1>الشروط والأحكام</h1>
+
+        <h2>1. المقدمة</h2>
+        <p>تعد هذه الشروط والأحكام ("الشروط") ملزمة قانونًا لاستخدام تطبيق MEDPRO المحمول والويب ("التطبيق"). من خلال الوصول إلى التطبيق أو استخدامه، فإنك توافق على هذه الشروط.</p>
+
+        <h2>2. وصف الخدمة</h2>
+        <p>MEDPRO هو منصة تقدم للمستخدمين الوصول إلى معلومات أساسية عن الأدوية. التطبيق لا يحل محل مشورة المتخصصين في الرعاية الصحية وهو مخصص لأغراض إعلامية فقط.</p>
+
+        <h2>3. شروط الاستخدام</h2>
+        <ul>
+            <li>التطبيق متاح للاستخدام الشخصي وغير التجاري فقط.</li>
+            <li>لا يجوز للمستخدمين استخدام المعلومات في التطبيق كبديل للنصيحة الطبية.</li>
+            <li>استشر طبيبك قبل استخدام أي دواء.</li>
+            <li>لا يجوز استخدام التطبيق لأغراض غير قانونية أو ضارة.</li>
+        </ul>
+
+        <h2>4. إخلاء المسؤولية</h2>
+        <p>يحرص MEDPRO على ضمان دقة المحتوى، ولكن قد تكون هناك بعض الأخطاء أو عدم الدقة. يجب على المستخدمين استشارة المتخصصين في الرعاية الصحية قبل استخدام أي أدوية.</p>
+
+        <h2>5. الخصوصية وحماية البيانات</h2>
+        <ul>
+            <li>يحافظ MEDPRO على سرية المعلومات الشخصية للمستخدمين ولا يشاركها مع أطراف ثالثة.</li>
+            <li>لا تتم معالجة أو تخزين البيانات الشخصية.</li>
+            <li>قد يتم تحليل البيانات المجهولة لتحسين تجربة المستخدم.</li>
+        </ul>
+
+        <h2>6. التغييرات في شروط الاستخدام</h2>
+        <p>يحتفظ MEDPRO بالحق في تعديل هذه الشروط. ستتم الإعلان عن التحديثات داخل التطبيق.</p>
+
+        <h2>7. القانون الواجب التطبيق والنزاعات</h2>
+        <p>تخضع هذه الشروط للقوانين السارية في البلد المعني، وستتم تسوية النزاعات في المحاكم المختصة.</p>
+
+        <h2>8. الاتصال</h2>
+        <p>إذا كانت لديك أي أسئلة بشأن هذه الشروط، يمكنك الاتصال بنا:</p>
+        <p><strong>البريد الإلكتروني:</strong> support@medpro.com</p>
+        <p><strong>الهاتف:</strong> +90 123 456 78 90</p>
+
+        <button class="btn" onclick="acceptTerms()">أوافق</button>
+    </div>
+
+    <script>
+        function acceptTerms() {
+            window.location.href = "dashboard.html";
+        }
+
+        function changeLanguage() {
+            var language = document.getElementById('languageSelect').value;
+            if(language === 'tr') {
+                window.location.href = "conditions-tr.html";
+            } else if(language === 'en') {
+                window.location.href = "conditions-eng.html";
+            } else if(language === 'ru') {
+                window.location.href = "conditions-ru.html";
+            } else if(language === 'ar') {
+                window.location.href = "conditions-ar.html";
+            }
+        }
+    </script>
+</body>
+</html>
