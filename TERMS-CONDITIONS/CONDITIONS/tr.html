@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şartlar ve Koşullar - MEDPRO</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: #333;
+            background: #F7F7F7;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(45deg, #FF9F00, #F88F00);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(255, 159, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 159, 0, 0.6);
+            background: linear-gradient(45deg, #F88F00, #FF9F00);
+        }
+        select {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #FF9F00, #F88F00); /* Sarı renk geçişi */
+    color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background: linear-gradient(45deg, #F88F00, #FF9F00); /* Hoverda renk değişimi */
+    box-shadow: 0 4px 10px rgba(255, 159, 0, 0.4);
+    transform: scale(1.02);
+}
+
+select option {
+    background-color: #FF9F00; /* Arka planı sarı yapıyoruz */
+    color: #fff; /* Yazı rengini beyaz yapıyoruz */
+    transition: background-color 0.3s ease;
+}
+
+select option:hover {
+    background-color: #F88F00; /* Hover durumunda biraz daha koyu sarı tonunda olacak */
+}
+
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="tr" selected>Türkçe</option>
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1>Şartlar ve Koşullar</h1>
+
+        <h2>1. Giriş</h2>
+        <p>Bu Şartlar ve Koşullar (“Koşullar”), MEDPRO mobil ve web uygulamasını (“Uygulama”) kullanmanıza ilişkin yasal olarak bağlayıcıdır. Uygulamaya erişerek veya kullanarak bu Koşulları kabul etmiş sayılırsınız.</p>
+
+        <h2>2. Hizmet Tanımı</h2>
+        <p>MEDPRO, kullanıcılara ilaçlarla ilgili temel bilgilere erişim sağlayan bir platformdur. Uygulama, sağlık profesyonellerinin tavsiyesi yerine geçmez ve sadece bilgilendirme amacı taşır.</p>
+
+        <h2>3. Kullanım Koşulları</h2>
+        <ul>
+            <li>Uygulama yalnızca kişisel ve ticari olmayan kullanım için sunulmuştur.</li>
+            <li>Kullanıcılar, tıbbi danışmanlık yerine uygulamadaki bilgileri kullanamaz.</li>
+            <li>İlaç kullanımıyla ilgili konularda mutlaka doktorunuza danışmalısınız.</li>
+            <li>Uygulama yasa dışı veya zararlı amaçlarla kullanılamaz.</li>
+        </ul>
+
+        <h2>4. Sorumluluk Reddi</h2>
+        <p>MEDPRO, içeriklerin doğruluğunu sağlamak için çaba gösterir ancak bilgilerde eksiklik veya hatalar olabilir. Kullanıcılar, ilaç kullanmadan önce sağlık uzmanlarına danışmalıdır.</p>
+
+        <h2>5. Gizlilik ve Veri Koruma</h2>
+        <ul>
+            <li>MEDPRO, kullanıcı bilgilerini gizli tutar ve üçüncü taraflarla paylaşmaz.</li>
+            <li>Kişisel veriler işlenmez veya saklanmaz.</li>
+            <li>Kullanıcı deneyimini iyileştirmek için anonim veriler analiz edilebilir.</li>
+        </ul>
+
+        <h2>6. Kullanım Koşullarının Değişimi</h2>
+        <p>MEDPRO, Koşulları değiştirme hakkını saklı tutar. Güncellemeler uygulamada duyurulacaktır.</p>
+
+        <h2>7. Yürütücü Hukuk ve Anlaşmazlıklar</h2>
+        <p>Bu Koşullar, ilgili ülke yasalarına tabidir ve anlaşmazlıklar yetkili mahkemelerce çözülecektir.</p>
+
+        <h2>8. İletişim</h2>
+        <p>Koşullarla ilgili sorularınız için bizimle iletişime geçebilirsiniz:</p>
+        <p><strong>Email:</strong> support@medpro.com</p>
+        <p><strong>Telefon:</strong> +90 123 456 78 90</p>
+
+        <button class="btn" onclick="acceptTerms()">Kabul Ediyorum</button>
+    </div>
+
+    <script>
+        function acceptTerms() {
+            window.location.href = "dashboard.html";
+        }
+
+        function changeLanguage() {
+            var language = document.getElementById('languageSelect').value;
+            if(language === 'tr') {
+                window.location.href = "conditions-tr.html";
+            } else if(language === 'en') {
+                window.location.href = "conditions-eng.html";
+            } else if(language === 'ru') {
+                window.location.href = "conditions-ru.html";
+            } else if(language === 'ar') {
+                window.location.href = "conditions-ar.html";
+            }
+        }
+    </script>
+</body>
+</html>
