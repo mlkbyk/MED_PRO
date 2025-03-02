@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - MEDPRO</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: #333;
+            background: #F7F7F7;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(45deg, #FF9F00, #F88F00);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(255, 159, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 159, 0, 0.6);
+            background: linear-gradient(45deg, #F88F00, #FF9F00);
+        }
+        select {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #FF9F00, #F88F00); /* Yellow gradient */
+    color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background: linear-gradient(45deg, #F88F00, #FF9F00); /* Hover color change */
+    box-shadow: 0 4px 10px rgba(255, 159, 0, 0.4);
+    transform: scale(1.02);
+}
+
+select option {
+    background-color: #FF9F00; /* Yellow background */
+    color: #fff; /* White text */
+    transition: background-color 0.3s ease;
+}
+
+select option:hover {
+    background-color: #F88F00; /* Darker yellow on hover */
+}
+
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="tr">Türkçe</option>
+            <option value="en" selected>English</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1>Terms and Conditions</h1>
+
+        <h2>1. Introduction</h2>
+        <p>These Terms and Conditions (“Terms”) are legally binding for the use of the MEDPRO mobile and web application (“App”). By accessing or using the App, you agree to these Terms.</p>
+
+        <h2>2. Service Description</h2>
+        <p>MEDPRO is a platform that provides users access to basic information about medications. The App does not replace the advice of healthcare professionals and is intended for informational purposes only.</p>
+
+        <h2>3. Terms of Use</h2>
+        <ul>
+            <li>The App is provided for personal and non-commercial use only.</li>
+            <li>Users may not use the information in the App as a substitute for medical advice.</li>
+            <li>Always consult your doctor before using any medication.</li>
+            <li>The App may not be used for illegal or harmful purposes.</li>
+        </ul>
+
+        <h2>4. Disclaimer</h2>
+        <p>MEDPRO strives to ensure the accuracy of the content, but there may be inaccuracies or errors. Users should consult healthcare professionals before using any medications.</p>
+
+        <h2>5. Privacy and Data Protection</h2>
+        <ul>
+            <li>MEDPRO keeps user information confidential and does not share it with third parties.</li>
+            <li>Personal data is not processed or stored.</li>
+            <li>Anonymized data may be analyzed to improve user experience.</li>
+        </ul>
+
+        <h2>6. Changes to Terms of Use</h2>
+        <p>MEDPRO reserves the right to modify these Terms. Updates will be announced within the app.</p>
+
+        <h2>7. Governing Law and Disputes</h2>
+        <p>These Terms are governed by the laws of the relevant country, and disputes will be resolved by the competent courts.</p>
+
+        <h2>8. Contact</h2>
+        <p>If you have any questions regarding these Terms, you can contact us:</p>
+        <p><strong>Email:</strong> support@medpro.com</p>
+        <p><strong>Phone:</strong> +90 123 456 78 90</p>
+
+        <button class="btn" onclick="acceptTerms()">I Accept</button>
+    </div>
+
+    <script>
+        function acceptTerms() {
+            window.location.href = "dashboard.html";
+        }
+
+        function changeLanguage() {
+            var language = document.getElementById('languageSelect').value;
+            if(language === 'tr') {
+                window.location.href = "conditions-tr.html";
+            } else if(language === 'en') {
+                window.location.href = "conditions-eng.html";
+            } else if(language === 'ru') {
+                window.location.href = "conditions-ru.html";
+            } else if(language === 'ar') {
+                window.location.href = "conditions-ar.html";
+            }
+        }
+    </script>
+</body>
+</html>
