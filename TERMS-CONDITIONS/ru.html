@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Условия использования - MEDPRO</title>
+    <title>Инструкции по применению - MEDPRO</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
     <style>
         * {
@@ -18,30 +18,17 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #fff;
-            position: relative;
-            background: url('medicine-photos/med-pro-0bg.jpg') no-repeat center center/cover;
-            overflow: hidden;
-        }
-        /* Background blur filter */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Darker overlay */
-            filter: blur(50px); /* Strong blur effect */
-            z-index: -1;
+            color: #333;
+            background: #f7f7f7;
+            padding: 20px;
         }
         .container {
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(12px); /* Inner blur effect */
+            background: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
             animation: fadeIn 1s ease-in-out;
         }
         h1 {
@@ -50,28 +37,16 @@
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
         p {
             font-size: 16px;
             margin-bottom: 15px;
-            color: #f1f1f1;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-        }
-        .link {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .link:hover {
-            text-decoration: underline;
-            color: #FFC107;
+            line-height: 1.5;
         }
         .btn {
             display: inline-block;
-            background: #FFD700;
-            color: #333;
+            background: #FF9F00;
+            color: #fff;
             font-size: 18px;
             font-weight: bold;
             padding: 12px 24px;
@@ -79,51 +54,32 @@
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
             margin-top: 15px;
         }
         .btn:hover {
-            background: #FFC107;
+            background: #F88F00;
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 159, 0, 0.4);
         }
-        .language-switch {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #f1f1f1;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .language-switch:hover {
-            color: #FFD700;
-        }
-        /* Dropdown menu styles */
         .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
             position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+        select {
+            padding: 8px; /* Smaller padding */
+            font-size: 12px; /* Smaller font size */
+            background-color: #FF9F00;
+            color: #fff;
+            border: none;
             border-radius: 8px;
+            cursor: pointer;
+            width: 160px; /* Smaller width */
+            transition: background 0.3s;
         }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #ddd;
-            color: black;
+        select:hover {
+            background-color: #F88F00;
         }
         @keyframes fadeIn {
             from {
@@ -135,39 +91,58 @@
                 transform: translateY(0);
             }
         }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
+    <div class="dropdown">
+        <select onchange="changeLanguage(this.value)">
+            <option value="instructions.html">Türkçe</option>
+            <option value="insturctions-eng.html">English</option>
+            <option value="insturction-ar.html">العربية</option>
+            <option value="instuctions-ru.html" selected>Русский</option>
+        </select>
+    </div>
+
     <div class="container">
-        <h1>Условия использования</h1>
-        <p>Перед использованием приложения, пожалуйста, прочитайте <a href="instuctions-ru.html" class="link">Инструкции пользователя</a>
-           и <a href="terms.html" class="link">Условия использования</a>.</p>
+        <h1>Инструкции по применению</h1>
+        <p>Это приложение предназначено для того, чтобы помочь вам легко получить доступ к информации о лекарствах. Перед использованием любого лекарства всегда соблюдайте указания вашего врача.</p>
+        <p>Вся информация, предоставленная этим приложением, предназначена только для информационных целей и не заменяет медицинские рекомендации. Если у вас есть вопросы о вашем лекарстве, пожалуйста, обратитесь к своему врачу.</p>
+        <p>Следуйте этим основным шагам при применении ваших препаратов:</p>
 
-        <button class="btn" onclick="acceptTerms()">Согласен</button>
-        </br>
+        <ul>
+            <li>Тщательно следуйте указаниям вашего врача.</li>
+            <li>Если у вас есть вопросы о дозировке, проконсультируйтесь с врачом.</li>
+            <li>Проконсультируйтесь с врачом по вопросам аллергенов и взаимодействий с другими лекарствами.</li>
+            <li>Не прекращайте принимать лекарства раньше времени.</li>
+            <li>Правильно храните лекарства и проверяйте сроки годности.</li>
+        </ul>
 
-        <div class="dropdown">
-            <p class="language-switch">🌍Выберите язык:</p>
-            <div class="dropdown-content">
-                <a href="#" onclick="changeLanguage('tr')">Türkçe</a>
-                <a href="#" onclick="changeLanguage('en')">English</a>
-                <a href="#" onclick="changeLanguage('ar')">العربية</a>
-            </div>
-        </div>
+        <button class="btn" onclick="acceptTerms()">Принять</button>
     </div>
 
     <script>
         function acceptTerms() {
-            window.location.href = "dashboard.html"; // Redirect to the main page
+            window.location.href = "dashboard.html";
         }
 
-        function changeLanguage(language) {
-            if (language === 'tr') {
-                window.location.href = "terms_and_conditions.html"; // Redirect to Turkish page
-            } else if (language === 'en') {
-                window.location.href = "terms-eng.html"; // Redirect to English page
-            } else if (language === 'ar') {
-                window.location.href = "terms-ar.html"; // Redirect to Arabic page
+        function changeLanguage(url) {
+            console.log("Seçilen URL:", url);
+            if (url) {
+                window.location.href = url;
+            } else {
+                alert("Geçerli bir dil seçimi yapınız.");
             }
         }
     </script>
