@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLAMOKS Prospektüsü</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>KLAMOKS KULLANIM TALİMATI</h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
+            <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
+            <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>KLAMOKS’u aşağıdaki durumlarda KULLANMAYINIZ:</h2>
+                <p>Eğer;</p>
+                <ul>
+                    <li>Beta laktam antibiyotiklerine (penisilin ve sefalosporinler gibi) karşı aşırı duyarlı (alerjik) iseniz.</li>
+                    <li>Geçmişte, KLAMOKS veya penisilin tedavisine bağlı sarılık/karaciğer yetmezliği geçirdiyseniz.</li>
+                    <li>Antibiyotiğe bağlı kalın bağırsak iltihabı (kolit) gözlendiğinde, KLAMOKS tedavisi derhal kesilmeli, çocuğunuz bir doktor tarafından değerlendirilmeli ve uygun tedaviye başlamalıdır.</li>
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>KLAMOKS’u aşağıdaki durumlarda DİKKATLİ KULLANINIZ:</h2>
+                <ul>
+                    <li>Eğer geçmişte, penisilin, sefalosporin ve diğer alerjenlere karşı aşırı duyarlılık hikayeniz varsa bunu mutlaka doktorunuza söylemelisiniz.</li>
+                    <li>Eğer enfeksiyöz mononükleoza (bir enfeksiyon hastalığı) ilişkin bir şüpheniz varsa.</li>
+                    <li>KLAMOKS’u doktorunuzun tavsiye ettiği süre boyunca kullanınız.</li>
+                    <li>Kanama ve pıhtılaşma süresinde uzama rapor edilmiştir.</li>
+                    <li>Eğer karaciğer yetmezliğiniz varsa.</li>
+                    <li>Seyrek olarak şiddetli olabilen sarılık bildirilmiştir.</li>
+                    <li>Eğer böbrek yetmezliğiniz varsa.</li>
+                    <li>Çıkan idrar miktarı azalmış hastalarda kristalüri (kum dökmek) görülmüştür.</li>
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>Diğer ilaçlar ile birlikte kullanım</h2>
+                <p>Bazı ilaçlar ile birlikte kullanıldığında KLAMOKS’un etkisi değişebilir.</p>
+                <ul>
+                    <li>Allopurinol kullanıyorsanız alerjik reaksiyon olasılığı artabilir.</li>
+                    <li>Probenesid alıyorsanız doz ayarlanabilir.</li>
+                    <li>Pıhtılaşmayı önleyen ilaçlarla birlikte fazladan kan testleri gerekebilir.</li>
+                    <li>KLAMOKS, metotreksatın etkisini değiştirebilir.</li>
+                    <li>KLAMOKS, mikofenolat mofetilin etkisini değiştirebilir.</li>
+                    <li>Doğum kontrol haplarının etkinliği azalabilir.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
