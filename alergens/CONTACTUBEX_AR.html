@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نشرة كونتراكتوبكس</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: right;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>تعليمات استخدام كونتراكتوبكس</h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">قبل الاستخدام</button>
+            <button onclick="showTab('dikkat')">الاحتياطات</button>
+            <button onclick="showTab('ilaclar')">الاستخدام مع أدوية أخرى</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>لا تستخدم كونتراكتوبكس في الحالات التالية:</h2>
+                <p>إذا:</p>
+                <ul>
+                    <li>كنت تعاني من فرط الحساسية تجاه الكيل-4-هيدروكسي بنزوات (البارابين) أو أي مكون آخر من مكونات الدواء، فلا تستخدم هذا الدواء.</li>
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>استخدم كونتراكتوبكس بحذر في الحالات التالية:</h2>
+                <ul>
+                    <li>في علاج الندوب الحديثة، تجنب التهيجات الفيزيائية مثل البرد الشديد، والأشعة فوق البنفسجية (أشعة الشمس المباشرة)، والتدليك المكثف.</li>
+                    <li>يحتوي كونتراكتوبكس على بارا-ميثيل هيدروكسي بنزوات الذي قد يسبب ردود فعل تحسسية (قد تكون متأخرة) وحمض السوربيك الذي قد يسبب ردود فعل جلدية موضعية (مثل التهاب الجلد التماسي).</li>
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>الاستخدام مع أدوية أخرى</h2>
+                <p>قد يتغير تأثير كونتراكتوبكس عند استخدامه مع أدوية معينة.</p>
+                <ul>
+                    <li>لا توجد تفاعلات دوائية معروفة.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
