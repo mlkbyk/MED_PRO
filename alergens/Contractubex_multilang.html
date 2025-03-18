@@ -20,14 +20,15 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .tabs {
+        .tabs, .language-tabs {
             display: flex;
             justify-content: space-around;
             background: #FFD700;
             padding: 10px;
             border-radius: 5px;
+            margin-bottom: 10px;
         }
-        .tabs button {
+        .tabs button, .language-tabs button {
             background: none;
             border: none;
             color: black;
@@ -36,78 +37,80 @@
             padding: 10px;
             font-weight: bold;
         }
-        .tabs button.active {
+        .tabs button.active, .language-tabs button.active {
             border-bottom: 2px solid black;
         }
-        .content {
-            margin-top: 20px;
-        }
-        .content div {
+        .content div, .language-content div {
             display: none;
         }
-        .content div.active {
+        .content div.active, .language-content div.active {
             display: block;
         }
         h2 {
             color: black;
             font-weight: bold;
-            text-decoration: none;
         }
     </style>
     <script>
         function showTab(tabId) {
-            let contents = document.querySelectorAll('.content div');
-            contents.forEach(div => div.classList.remove('active'));
+            document.querySelectorAll('.content div').forEach(div => div.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-
-            let buttons = document.querySelectorAll('.tabs button');
-            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelectorAll('.tabs button').forEach(button => button.classList.remove('active'));
             document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+
+        function showLanguage(langId) {
+            document.querySelectorAll('.language-content div').forEach(div => div.classList.remove('active'));
+            document.getElementById(langId).classList.add('active');
+            document.querySelectorAll('.language-tabs button').forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showLanguage('${langId}')"]`).classList.add('active');
         }
     </script>
 </head>
 <body>
     <div class="container">
         <h1>KLAMOKS KULLANIM TALİMATI</h1>
-        <div class="tabs">
-            <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
-            <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
-            <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+        
+        <div class="language-tabs">
+            <button class="active" onclick="showLanguage('turkish')">Türkçe</button>
+            <button onclick="showLanguage('english')">English</button>
+            <button onclick="showLanguage('russian')">Русский</button>
+            <button onclick="showLanguage('arabic')">العربية</button>
         </div>
-        <div class="content">
-            <div id="kullanmadan" class="active">
-                <h2>KLAMOKS’u aşağıdaki durumlarda KULLANMAYINIZ:</h2>
-                <p>Eğer;</p>
-                <ul>
-                    <li>Beta laktam antibiyotiklerine (penisilin ve sefalosporinler gibi) karşı aşırı duyarlı (alerjik) iseniz.</li>
-                    <li>Geçmişte, KLAMOKS veya penisilin tedavisine bağlı sarılık/karaciğer yetmezliği geçirdiyseniz.</li>
-                    <li>Antibiyotiğe bağlı kalın bağırsak iltihabı (kolit) gözlendiğinde, KLAMOKS tedavisi derhal kesilmeli, çocuğunuz bir doktor tarafından değerlendirilmeli ve uygun tedaviye başlamalıdır.</li>
-                </ul>
+        
+        <div class="language-content">
+            <div id="turkish" class="active">
+                <div class="tabs">
+                    <button class="active" onclick="showTab('kullanmadan')">Kullanmadan Önce</button>
+                    <button onclick="showTab('dikkat')">Dikkat Edilmesi Gerekenler</button>
+                    <button onclick="showTab('ilaclar')">Diğer İlaçlarla Kullanımı</button>
+                </div>
+                <div class="content">
+                    <div id="kullanmadan" class="active">
+                        <h2>KULLANMAYINIZ</h2>
+                        <p>Alerjiniz varsa kullanmayınız.</p>
+                    </div>
+                    <div id="dikkat">
+                        <h2>DİKKATLİ KULLANINIZ</h2>
+                        <p>Doktor tavsiyesi olmadan kullanmayınız.</p>
+                    </div>
+                    <div id="ilaclar">
+                        <h2>DİĞER İLAÇLARLA KULLANIM</h2>
+                        <p>Diğer ilaçlarla etkileşime dikkat ediniz.</p>
+                    </div>
+                </div>
             </div>
-            <div id="dikkat">
-                <h2>KLAMOKS’u aşağıdaki durumlarda DİKKATLİ KULLANINIZ:</h2>
-                <ul>
-                    <li>Eğer geçmişte, penisilin, sefalosporin ve diğer alerjenlere karşı aşırı duyarlılık hikayeniz varsa bunu mutlaka doktorunuza söylemelisiniz.</li>
-                    <li>Eğer enfeksiyöz mononükleoza (bir enfeksiyon hastalığı) ilişkin bir şüpheniz varsa.</li>
-                    <li>KLAMOKS’u doktorunuzun tavsiye ettiği süre boyunca kullanınız.</li>
-                    <li>Kanama ve pıhtılaşma süresinde uzama rapor edilmiştir.</li>
-                    <li>Eğer karaciğer yetmezliğiniz varsa.</li>
-                    <li>Seyrek olarak şiddetli olabilen sarılık bildirilmiştir.</li>
-                    <li>Eğer böbrek yetmezliğiniz varsa.</li>
-                    <li>Çıkan idrar miktarı azalmış hastalarda kristalüri (kum dökmek) görülmüştür.</li>
-                </ul>
+            <div id="english">
+                <h2>DO NOT USE</h2>
+                <p>Do not use if you are allergic.</p>
             </div>
-            <div id="ilaclar">
-                <h2>Diğer ilaçlar ile birlikte kullanım</h2>
-                <p>Bazı ilaçlar ile birlikte kullanıldığında KLAMOKS’un etkisi değişebilir.</p>
-                <ul>
-                    <li>Allopurinol kullanıyorsanız alerjik reaksiyon olasılığı artabilir.</li>
-                    <li>Probenesid alıyorsanız doz ayarlanabilir.</li>
-                    <li>Pıhtılaşmayı önleyen ilaçlarla birlikte fazladan kan testleri gerekebilir.</li>
-                    <li>KLAMOKS, metotreksatın etkisini değiştirebilir.</li>
-                    <li>KLAMOKS, mikofenolat mofetilin etkisini değiştirebilir.</li>
-                    <li>Doğum kontrol haplarının etkinliği azalabilir.</li>
-                </ul>
+            <div id="russian">
+                <h2>НЕ ИСПОЛЬЗУЙТЕ</h2>
+                <p>Не используйте, если у вас аллергия.</p>
+            </div>
+            <div id="arabic">
+                <h2>لا تستخدم</h2>
+                <p>لا تستخدم إذا كنت تعاني من حساسية.</p>
             </div>
         </div>
     </div>
