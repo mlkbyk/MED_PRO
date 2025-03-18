@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTRACTUBEX Prospect</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tabs button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .tabs button.active {
+            border-bottom: 2px solid black;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            let contents = document.querySelectorAll('.content div');
+            contents.forEach(div => div.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            let buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(button => button.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>CONTRACTUBEX INSTRUCTIONS FOR USE</h1>
+        <div class="tabs">
+            <button class="active" onclick="showTab('kullanmadan')">Before Using</button>
+            <button onclick="showTab('dikkat')">Precautions</button>
+            <button onclick="showTab('ilaclar')">Use With Other Medications</button>
+        </div>
+        <div class="content">
+            <div id="kullanmadan" class="active">
+                <h2>DO NOT USE CONTRACTUBEX in the following situations:</h2>
+                <p>If:</p>
+                <ul>
+                    <li>You are hypersensitive to alkyl-4-hydroxybenzoates (parabens) or any other component of the medication, do not use this medication.</li>
+                </ul>
+            </div>
+            <div id="dikkat">
+                <h2>USE CONTRACTUBEX WITH CAUTION in the following situations:</h2>
+                <ul>
+                    <li>In the treatment of fresh scars, avoid physical irritations such as extreme cold, UV rays (direct sunlight), and intense massage.</li>
+                    <li>CONTRACTUBEX® contains p-methyl hydroxybenzoate which may cause allergic reactions (possibly delayed) and sorbic acid which may cause local skin reactions (such as contact dermatitis).</li>
+                </ul>
+            </div>
+            <div id="ilaclar">
+                <h2>Use with other medications</h2>
+                <p>The effect of CONTRACTUBEX may change when used with certain medications.</p>
+                <ul>
+                    <li>There are no known drug interactions.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
